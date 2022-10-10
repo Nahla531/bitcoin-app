@@ -61,11 +61,6 @@
     vertical-align: -0.1em;
   }
 }
-.increase::after {
-  content: "\2193";
-  font-size: 2em;
-  padding-left: 0.5px;
-}
 @media all and (max-width: 769px) {
   .priceList_card {
     width: 90%;
