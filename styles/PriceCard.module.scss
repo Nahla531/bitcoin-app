@@ -1,0 +1,36 @@
+.priceList_card {
+  width: 250px;
+  height: 250px;
+}
+.priceList_card__cardRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btcImg {
+  width: 39px;
+  height: 39px;
+}
+
+.innerCol {
+  span {
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.priceList_card__col {
+  h6 {
+    font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0px;
+  }
+}
+
+.percentage {
+  margin-top: 7px;
+}
