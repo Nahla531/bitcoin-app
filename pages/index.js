@@ -1,16 +1,17 @@
 import { getBpi } from "./api/getBpi";
 import { useDispatch } from "react-redux";
 import { setPrices } from "../redux/features/prices/pricesSlice";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import PriceList from "../components/PriceList";
 import Layout from "../components/Layout";
 export default function Home() {
   const dispatch = useDispatch();
-
+  const [statePrev, setState] = useState([]);
+  let result;
   const setData = async () => {
     const data = await getBpi();
     const bpi = data["bpi"];
-    const result = Object.keys(bpi)?.map(function (key) {
+    result = Object.keys(bpi)?.map(function (key) {
       return { code: bpi[key]?.code, price: bpi[key]?.rate };
     });
     dispatch(setPrices(result));
@@ -19,8 +20,9 @@ export default function Home() {
   useEffect(() => {
     setData();
     let interval = setInterval(() => {
+      setState(result);
       setData();
-    }, 10000);
+    }, 30000);
     return () => {
       clearInterval(interval);
     };
@@ -33,10 +35,8 @@ export default function Home() {
           <header>
             <h1>Bitcoin price </h1>
           </header>
-          <PriceList />
+          <PriceList prevPrices={statePrev} />
         </main>
-
-        
       </Layout>
     </>
   );

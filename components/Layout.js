@@ -1,7 +1,6 @@
 import Head from "next/head";
 import React from "react";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
 
 const Layout = (props) => {
   return (
@@ -16,7 +15,6 @@ const Layout = (props) => {
       </Head>
       <Navbar />
       {props.children}
-      <Footer />
     </>
   );
 };

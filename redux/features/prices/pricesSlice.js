@@ -8,6 +8,7 @@ export const pricesSlice = createSlice({
   reducers: {
     setPrices: (state, action) => {
       state.value = action.payload;
+      console.log(state.value);
     },
   },
 });

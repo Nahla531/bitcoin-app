@@ -1,11 +1,84 @@
 .container {
   text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  header {
+    h1 {
+      padding-bottom: 20px;
+    }
+  }
+  height: 90vh;
 }
 
-// .footer {
-//   height: 60px;
-//   background-color: red;
-//   position: absolute;
-//   bottom: 0px;
-//   width: 100%;
-// }
+.navbar {
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+  width: 100%;
+}
+
+.nav-list {
+  list-style-type: none;
+  .list-item {
+    display: inline-block;
+    padding: 10px;
+  }
+}
+
+a:hover {
+  color: #c59d5f;
+}
+
+.hamburger {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #283b8b;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  right: 25px;
+  top: 10px;
+  display: none;
+}
+
+.about {
+  text-align: center;
+  padding-top: 30px;
+}
+@media all and (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    height: 60px;
+  }
+  .navbar.expanded {
+    height: auto;
+    padding-top: 10px;
+  }
+  .hamburger {
+    display: block;
+  }
+  .nav-list {
+    width: 100%;
+    text-align: center;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    display: none;
+    .list-item {
+      display: block;
+      border-top: 1px solid #fff;
+    }
+  }
+  .nav-list.expanded {
+    display: block;
+  }
+  .logo {
+    align-self: flex-start;
+    padding-left: 4px;
+  }
+}
