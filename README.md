@@ -27,3 +27,7 @@ Resource :https://nextjs.org/learn/basics/create-nextjs-app/setup
 - make sure docker is installed
 - run -> docker build -t imageNAmeOfYourChoice
 - run -> docker run -p 3000:3000 imageNAmeOfYourChoice
+
+**_note_**
+
+you can find the docker image here (https://hub.docker.com/r/nhlatest/bitcoin-app)
