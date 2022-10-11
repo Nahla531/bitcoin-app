@@ -10,7 +10,6 @@ const PriceList = ({ prevPrices }) => {
       prevPrice: prevPrices[index]?.price,
     };
   });
-  console.log("prices", prices);
   return (
     <div className={styles.priceList}>
       {prices.map((item, index) => (
