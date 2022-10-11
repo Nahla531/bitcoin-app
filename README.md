@@ -1,6 +1,6 @@
 # Bitcoin-prices
 
-This project is build using NextJs,React, and redux it shows BTC rates in different currencies from coinDesk API and updated the price rgulary.
+This project is build using NextJs,React, and redux it shows BTC rates in different currencies from coinDesk API and updated the price regularly.
 
 ---
 
