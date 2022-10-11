@@ -10,7 +10,7 @@ Resource :https://nextjs.org/learn/basics/create-nextjs-app/setup
 
 ---
 
-## Tecnology used :
+## Technology used :
 
 - NextJS
 - ReactJs
@@ -21,3 +21,9 @@ Resource :https://nextjs.org/learn/basics/create-nextjs-app/setup
 
 - yarn install
 - yarn next dev (for dev env)
+
+### How to build Docker image and run it locally
+
+- make sure docker is installed
+- run -> docker build -t imageNAmeOfYourChoice
+- run -> docker run -p 3000:3000 imageNAmeOfYourChoice
